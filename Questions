@@ -1,0 +1,128 @@
+1. What is Linux?
+A: Linux is an open-source, Unix-like operating system kernel. It is the core component of many distributions (distros) like Ubuntu, CentOS, and Fedora.
+
+2. What is the difference between Linux and Unix?
+Answer:
+Unix: Proprietary OS (e.g., Solaris, AIX)
+Linux: Open-source Unix clone
+Linux runs on more hardware and is widely used in cloud and servers.
+
+3. What is the Linux file system hierarchy?
+Answer:
+bash
+Copy
+Edit
+/      - Root directory  
+/bin   - Essential binaries  
+/boot  - Boot loader files  
+/etc   - Configuration files  
+/home  - User home directories  
+/var   - Variable data (logs, mail)  
+/usr   - User applications  
+/tmp   - Temporary files
+
+
+4. What is the difference between su and sudo?
+Answer:
+su: Switch user (default: root), requires root password.
+sudo: Execute command as another user (default: root), requires user's own password and privileges.
+
+
+7. What is a symbolic link and how is it created?
+Answer:
+A symbolic link is a reference to another file.
+
+bash
+Copy
+Edit
+ln -s /path/to/original /path/to/link
+
+
+8. What is the difference between a hard link and a soft link?
+Answer:
+Hard Link: Points directly to inode. Cannot link directories or across filesystems.
+Soft Link: Points to the file path. Can span filesystems, breaks if target is deleted.
+
+9. 12. How do you troubleshoot high CPU usage in Linux?
+Answer:
+Use top or htop to identify the process.
+Use ps -p <pid> -o %cpu,%mem,cmd for details.
+Check logs in /var/log.
+
+
+
+10. How do you monitor system performance in Linux?
+Answer:
+top, htop – CPU, memory
+iostat – Disk I/O
+vmstat – Memory, processes
+sar – Historical data
+
+
+11. What is a Kernel in Linux?
+Answer:
+The kernel is the core component of the Linux operating system. It acts as a bridge between the hardware and the software applications.
+🔧 Functions of the Kernel:
+  * Process Management
+    Schedules processes, manages multitasking, and handles process creation and termination.
+  * Memory Management
+    Allocates and manages RAM usage for programs.
+  * Device Management
+    Controls communication with hardware devices via drivers.
+  * File System Management
+    Manages data storage, file access, and directory structure.
+  * System Calls Interface
+    Provides an API for user-space applications to interact with hardware via system calls.
+
+🔍 Example Analogy:
+Think of the kernel as the manager of a restaurant:
+The hardware is the kitchen.
+The applications are the waitstaff.
+The kernel ensures that orders (data) flow between staff and kitchen smoothly, efficiently, and securely.
+🧠 Types of Kernels:
+Monolithic Kernel (like Linux): All OS services run in kernel space.
+Microkernel: Minimal services in kernel; others run in user space.
+
+
+
+
+12. What is LVM and how do you extend a volume?
+Answer:
+LVM (Logical Volume Manager) allows flexible disk management.
+To extend:
+bash
+Copy
+Edit
+lvextend -L +10G /dev/vg_name/lv_name
+resize2fs /dev/vg_name/lv_name    # For ext4
+
+
+
+13. What are inodes?
+Answer:
+Inodes store metadata about files (size, owner, permissions, timestamps, etc.) but not the filename or contents. Every file has a unique inode.
+
+
+
+13. How do you find and delete files older than X days?
+Answer:
+bash
+Copy
+Edit
+find /path/to/dir -type f -mtime +30 -exec rm -f {} \;
+
+
+
+14.  Explain the difference between soft and hard mounts in NFS.
+Answer:
+Soft mount: Fails quickly if server is unreachable.
+Hard mount: Keeps trying until server responds. Safer for critical data but can hang.
+
+
+
+15. Explain what nice, renice, and top priority values are.
+Answer:
+nice: Set priority at start (nice -n 10 script.sh)
+renice: Change priority of running process
+Priority range: -20 (highest) to 19 (lowest)
+
