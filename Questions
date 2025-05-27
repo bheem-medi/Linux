@@ -240,8 +240,229 @@ creates a virtual storage array that appears as a single device to the operating
 
 
 
-33. 
+33. What are Nginx log files in Linux 
+NGINX has two types of logs. the error log and the access log. By default, these logs are written 
+simultaneously. The access and error logs are usually located at /var/log/nginx on popular Linux 
+distributions like Ubuntu, CentOS or Debian. 
+In Linux, Nginx log files are files where the Nginx web server records information about its activity. 
+These logs are crucial for monitoring, debugging, and analyzing how the server is handling requests.
+
+
+
+
+34. What is Linux, and what are its basic components? 
+Linux is a Unix-like, open-source operating system that's widely used across various devices, from 
+desktops to servers. Its core components are the kernel, system libraries, and system utilities. The kernel 
+manages hardware, system libraries provide functionality, and system utilities perform specific tasks. 
 
  
- 
+ 35. What are the different types of file permissions in Linux? 
+In Linux, file permissions control who can access and modify files. The core permissions are read, write, 
+and execute, represented by 'r', 'w', and 'x' respectively. These permissions are assigned to three 
+categories: the owner, the group, and other users.  
 
+
+
+36. What is the difference between su and sudo commands in Linux? 
+In Linux, su and sudo are both used to execute commands with elevated privileges, but they differ in 
+how they manage user switching and password requirements. sudo allows a user to execute specific 
+commands as root (or another user) using their own password, while su switches to another user 
+entirely, requiring the password of that user.  
+
+
+
+37. What is the purpose of the chmod command in Linux? 
+The chmod command in Linux is used to change the access permissions of files and directories. It allows 
+you to control who can read, write, and execute a specific file or directory, affecting its security and 
+accessibility. 
+
+
+
+38. How do you check the current working directory in Linux? 
+To determine the exact location of the current directory at a shell prompt and type the command pwd.  
+This example shows that you are in the user sam’s directory, which is in the /home/ directory. The 
+command pwd stands for print working directory. 
+
+
+
+
+39. What is the purpose of the grep command in Linux? 
+The grep command in Linux is a powerful text search tool. It's used to find lines that match a specific 
+pattern or text within one or more files. Essentially, grep (which stands for "Global Regular Expression 
+Print") is used to filter and search for specific text in files, making it indispensable for tasks like log 
+analysis, troubleshooting, and data processing.
+
+
+
+40. How do you find the process ID of a running process in Linux? 
+You can list running processes using the ps command (ps means process status). The ps command 
+displays your currently running processes in real-time. This will display the process for the current shell 
+with four columns: PID returns the unique process ID
+
+
+
+41. What is Kernel? Explain its functions. 
+A kernel is considered the main component of Linux OS. It is simply a resource manager that acts as a 
+bridge between hardware and software. Its main role is to manage hardware resources for users and is 
+generally used to provide an interface for user-level interaction. A kernel is the first program that is loaded 
+whenever a computer system starts. It is also referred to as low-level system software. 
+main functions include: 
+Memory Management 
+Process Management 
+Device Management 
+Storage Management 
+Manage access, and use of various peripherals that are connected to the computer. 
+
+
+
+42. What is swap space? 
+Swap space, as the name suggests, is basically a space on a hard disk that is used when the amount of 
+physical memory or RAM is full. It is considered a substitute for physical memory. Its main function is to 
+substitute disk space for RAM memory when real RAM does not have enough space to hold all programs 
+that are executing, and more space is required.
+
+
+
+43.  What is Linux Shell? What types of Shells are there in Linux? 
+Linux shell is a user interface present between user and kernel. It is used for executing commands and 
+communication with Linux OS. Linux shell is basically a program used by users for executing commands. 
+It accepts human-readable commands as input and converts them into kernel understandable language. 
+Different types of shells:  
+CSH (C Shell) 
+KSH (Korn Shell) 
+BASH (Bourne Again Shell) 
+TCSH 
+ZSH 
+Bourne Shell
+
+
+44. What are file permissions in Linux? Name different types of file systems in Linux. 
+There are three owners in the Linux System i.e., user, group, and others. These owners have three types 
+of permissions defined as listed below: 
+Read (r): It allows the user to open and read the file or list the directory. 
+Write (w): It allows the user to open and modify the file. One can also add new files to the directory. 
+Execute (x): It allows the user to execute or run the file. One can also lookup a specific file within a 
+directory.
+
+
+
+45. What is LVM and why is it required? 
+LVM (Logical Volume Management) is basically a tool that provides logical volume management for the 
+Linux kernel. It is being introduced simply to make physical storage device management easier. It also 
+includes allocating disks, striping, mirroring, resizing logical volumes. Its main advantages are increased 
+abstraction, flexibility, and control. It simply allows for flexible disk space management. It is especially 
+required to resize the size of the file system online. In Linux, the size of the LVM partition can be 
+extended using “lvextend” command and can be reduced using “lvreduce” commands, respectively.
+
+
+
+46.  What is INODE and Process Id? 
+INODE: It is a unique name given to each file by OS. Each inode has a unique inode number within a file 
+system. It stores various information about files in Linux such as ownership, file size, file type, access 
+mode, number of links, etc. 
+Process Id (Identifier): It is a unique Id given to each process. It is simply used to uniquely identify an 
+active process throughout the system until the process terminates.
+
+
+
+
+47. Name default ports used for DNS, SMTP, FTP, SSH, DHCP and squid. 
+Default ports used for various services are as follows: 
+Service Port 
+DNS     53 
+SMTP    25 
+FTP     20 (Data transfer), 21 (Connection established) 
+SSH     22 
+DHCP    67/UDP (dhcp server), 68/UDP (dhcp client) 
+squid   3128
+
+
+
+48. Write the difference between Soft and Hard links? 
+Hard Links: It is a special kind of file that points to the same underlying inode as another file. It can be 
+referred to as an additional name for an existing file on Linux OS. Total number of hard links for a file can 
+be displayed using the “ls -l” command. 
+Soft Links: It is also termed a symbolic Link. Soft links are kinds of files that usually point to another file. 
+It does not include any amount of data in the target file and simply points to another entry anywhere in 
+the file system.
+
+
+
+
+49. What is samba? Why is it required? 
+Samba is basically an open-source software suite. It runs a number of different Operating systems such 
+as OpenVMS, IBM , etc. It is generally used to connect Linux machines to Microsoft network resources 
+simply by providing Microsoft SMB support. 
+It provides more secure, stable, fast file and print services for every client or user using SMB (Server 
+Message Block) or CIFS (Central Server Message Block) protocol. 
+
+
+
+
+50.  Explain about chmod command? 
+Answer: The chmod command is used for changing the permissions of files and directories. There are 
+three types of permissions, read, write and execute and are represented by numbers as shown below. 
+* 4 - read permission 
+* 2 - write permission 
+* 1- execute permission
+
+
+
+51.  What are the process states in Linux? 
+Answer: There are 5 process states in Linux; 
+* New / Ready process 
+* Running process 
+* Blocked or Wait for process 
+* Terminated or completed the process 
+* Zombie process.
+
+
+
+
+52. What Is A Zombie process? 
+Answer : Zombie is a process state when the child dies before the parent process.
+
+
+
+53.  How Do You Find Out All Processes That Are Currently Running? 
+Answer : ps -f (-f does full-format listing.) 
+
+
+54. How Do You Kill A Process? 
+Answer : kill -9 8 (process_id 8) 
+
+
+
+55. What command do you use to All Mounted Drives? 
+Answer : mount -l 
+
+
+
+
+56. What Is Meant By Sticky Bit? 
+Answer : When the sticky bit is set on a world writable directory, only the owner can delete any file 
+contained in that directory. 
+
+
+
+57.  What Is Nfs? What Is Its Job? 
+Answer : NFS stands for Network File System. NFS enables filesystems physically residing on one 
+computer system to be used by other computers in the network, appearing to users on the remote host 
+as just another local disk.
+
+
+
+
+58. What Account Is Created When You Install Linux? 
+Answer : its root account - Whenever you install Linux, only one user account is created. This is the 
+super user account also known as root.
+
+
+
+
+59. What Utility Can You Use To Automate Rotation Of Logs? 
+Answer : logrotate 
+
+
+
+60. 
