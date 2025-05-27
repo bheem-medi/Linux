@@ -21,13 +21,6 @@ Edit
 /usr   - User applications  
 /tmp   - Temporary files
 
-
-4. What is the difference between su and sudo?
-Answer:
-su: Switch user (default: root), requires root password.
-sudo: Execute command as another user (default: root), requires user's own password and privileges.
-
-
 7. What is a symbolic link and how is it created?
 Answer:
 A symbolic link is a reference to another file.
@@ -267,7 +260,11 @@ categories: the owner, the group, and other users.
 In Linux, su and sudo are both used to execute commands with elevated privileges, but they differ in 
 how they manage user switching and password requirements. sudo allows a user to execute specific 
 commands as root (or another user) using their own password, while su switches to another user 
-entirely, requiring the password of that user.  
+entirely, requiring the password of that user. 
+
+su: Switch user (default: root), requires root password.
+sudo: Execute command as another user (default: root), requires user's own password and privileges.
+
 
 
 
