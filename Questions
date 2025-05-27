@@ -31,11 +31,6 @@ Edit
 ln -s /path/to/original /path/to/link
 
 
-8. What is the difference between a hard link and a soft link?
-Answer:
-Hard Link: Points directly to inode. Cannot link directories or across filesystems.
-Soft Link: Points to the file path. Can span filesystems, breaks if target is deleted.
-
 9. 12. How do you troubleshoot high CPU usage in Linux?
 Answer:
 Use top or htop to identify the process.
@@ -376,13 +371,14 @@ squid   3128
 
 
 48. Write the difference between Soft and Hard links? 
-Hard Links: It is a special kind of file that points to the same underlying inode as another file. It can be 
+Answer: Hard Links: It is a special kind of file that points to the same underlying inode as another file. It can be 
 referred to as an additional name for an existing file on Linux OS. Total number of hard links for a file can 
 be displayed using the “ls -l” command. 
 Soft Links: It is also termed a symbolic Link. Soft links are kinds of files that usually point to another file. 
 It does not include any amount of data in the target file and simply points to another entry anywhere in 
 the file system.
-
+Hard Link: Points directly to inode. Cannot link directories or across filesystems.
+Soft Link: Points to the file path. Can span filesystems, breaks if target is deleted.
 
 
 
