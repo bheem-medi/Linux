@@ -125,13 +125,95 @@ systemctl start sshd
 systemctl enable apache2	
 
 
+21. What is Booting and booting process?
+A:  Booting is the process your computer goes through when you turn it on to load the operating system (Linux, in this case) so you can use it.
+
+🧰 Linux Boot Process — Step-by-Step
+Here’s a simplified flow of the Linux boot process:
+
+Power ON ➝ BIOS/UEFI ➝ Bootloader ➝ Kernel ➝ init/systemd ➝ Login
+
+
+Let’s break that down:
+
+1. ⚙️ BIOS / UEFI (Basic Input/Output System / Unified Extensible Firmware Interface)
+The computer's firmware runs first.
+It checks the hardware (RAM, CPU, keyboard, etc.) — this is called POST (Power-On Self-Test).
+Then it looks for a bootable device (like your hard drive or USB).
+
+📝 Example: The BIOS finds your SSD and loads the bootloader from it.
+
+2. 🥾 Bootloader (e.g., GRUB)
+The bootloader chooses which OS to load (especially if you have multiple installed).
+
+Loads the Linux kernel into memory.
+
+📝 Example: GRUB menu shows "Ubuntu" and "Advanced Options"; you select Ubuntu.
+
+3. 🐧 Kernel Loads
+The Linux kernel takes over.
+
+It sets up memory, devices, and mounts the root filesystem (your hard drive).
+
+Then it starts the init process (like systemd).
+
+📝 Example: You see messages like Loading Linux... or vmlinuz.
+
+4. 🚦 Init System Starts (e.g., systemd)
+This is PID 1 — the first real process on the system.
+
+Starts services like:
+Network
+Login manager
+Disk mounting
+GUI (if desktop)
+
+📝 Example: systemd starts services like network.service, ssh.service, etc.
+
+5. 🔑 Login Prompt / Desktop
+You get a login prompt (if CLI) or the GUI login screen.
+You log in and start using the system.
+
+📝 Example: You see the Ubuntu login screen, enter your password, and reach your desktop.
+
+🖼️ Simple Visual
+
+[Power ON]
+     ↓
+[BIOS/UEFI]
+     ↓
+[GRUB Bootloader]
+     ↓
+[Linux Kernel Loads]
+     ↓
+[systemd (PID 1) starts]
+     ↓
+[Login Prompt or GUI]
+🔁 Example in Action
+You press the power button →
+BIOS checks your SSD →
+GRUB loads and shows Ubuntu →
+You select Ubuntu →
+The kernel loads Linux →
+systemd starts background services →
+Login screen appears →
+You log in and start using your computer!
+
+✅ Summary
+Step	What Happens
+BIOS/UEFI	Starts the hardware, looks for bootloader
+Bootloader (GRUB)	Loads the Linux kernel
+Kernel	Sets up system, mounts root filesystem
+Init system (systemd)	Starts services
+Login	You log in to use the system
 
 
 
 
 
 
-21. How do you find files in Linuyx?
+
+22. How do you find files in Linuyx?
 
 Ans: In Linux, you can use find and locate to search for files—but they work very differently.
     * 🔍 Using find — Like Walking Through Every Shelf
