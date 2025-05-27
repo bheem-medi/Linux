@@ -47,44 +47,6 @@ vmstat – Memory, processes
 sar – Historical data
 
 
-11. What is a Kernel in Linux?
-Answer:
-The kernel is the core component of the Linux operating system. It acts as a bridge between the hardware and the software applications.
-🔧 Functions of the Kernel:
-  * Process Management
-    Schedules processes, manages multitasking, and handles process creation and termination.
-  * Memory Management
-    Allocates and manages RAM usage for programs.
-  * Device Management
-    Controls communication with hardware devices via drivers.
-  * File System Management
-    Manages data storage, file access, and directory structure.
-  * System Calls Interface
-    Provides an API for user-space applications to interact with hardware via system calls.
-
-🔍 Example Analogy:
-Think of the kernel as the manager of a restaurant:
-The hardware is the kitchen.
-The applications are the waitstaff.
-The kernel ensures that orders (data) flow between staff and kitchen smoothly, efficiently, and securely.
-🧠 Types of Kernels:
-Monolithic Kernel (like Linux): All OS services run in kernel space.
-Microkernel: Minimal services in kernel; others run in user space.
-
-
-
-
-12. What is LVM and how do you extend a volume?
-Answer:
-LVM (Logical Volume Manager) allows flexible disk management.
-To extend:
-bash
-Copy
-Edit
-lvextend -L +10G /dev/vg_name/lv_name
-resize2fs /dev/vg_name/lv_name    # For ext4
-
-
 
 13. What are inodes?
 Answer:
@@ -94,9 +56,6 @@ Inodes store metadata about files (size, owner, permissions, timestamps, etc.) b
 
 13. How do you find and delete files older than X days?
 Answer:
-bash
-Copy
-Edit
 find /path/to/dir -type f -mtime +30 -exec rm -f {} \;
 
 
@@ -126,13 +85,6 @@ A: Basically a CMD inteface that lets you interact with OS os called shell. It l
     * System Utility
     * Boot loader
     * Applicatiom software
-
-
-
-
-
-
-
 
 
 18. What is the init process in linux?
@@ -294,7 +246,7 @@ with four columns: PID returns the unique process ID
 
 
 41. What is Kernel? Explain its functions. 
-A kernel is considered the main component of Linux OS. It is simply a resource manager that acts as a 
+Answer: A kernel is considered the main component of Linux OS. It is simply a resource manager that acts as a 
 bridge between hardware and software. Its main role is to manage hardware resources for users and is 
 generally used to provide an interface for user-level interaction. A kernel is the first program that is loaded 
 whenever a computer system starts. It is also referred to as low-level system software. 
@@ -305,6 +257,27 @@ Device Management
 Storage Management 
 Manage access, and use of various peripherals that are connected to the computer. 
 
+The kernel is the core component of the Linux operating system. It acts as a bridge between the hardware and the software applications.
+🔧 Functions of the Kernel:
+  * Process Management
+    Schedules processes, manages multitasking, and handles process creation and termination.
+  * Memory Management
+    Allocates and manages RAM usage for programs.
+  * Device Management
+    Controls communication with hardware devices via drivers.
+  * File System Management
+    Manages data storage, file access, and directory structure.
+  * System Calls Interface
+    Provides an API for user-space applications to interact with hardware via system calls.
+
+🔍 Example Analogy:
+Think of the kernel as the manager of a restaurant:
+The hardware is the kitchen.
+The applications are the waitstaff.
+The kernel ensures that orders (data) flow between staff and kitchen smoothly, efficiently, and securely.
+🧠 Types of Kernels:
+Monolithic Kernel (like Linux): All OS services run in kernel space.
+Microkernel: Minimal services in kernel; others run in user space.
 
 
 42. What is swap space? 
@@ -346,6 +319,10 @@ abstraction, flexibility, and control. It simply allows for flexible disk space 
 required to resize the size of the file system online. In Linux, the size of the LVM partition can be 
 extended using “lvextend” command and can be reduced using “lvreduce” commands, respectively.
 
+LVM (Logical Volume Manager) allows flexible disk management.
+To extend:
+lvextend -L +10G /dev/vg_name/lv_name
+resize2fs /dev/vg_name/lv_name    # For ext4
 
 
 46.  What is INODE and Process Id? 
