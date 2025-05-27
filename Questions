@@ -88,17 +88,85 @@ A: Basically a CMD inteface that lets you interact with OS os called shell. It l
 
 
 18. What is the init process in linux?
-A: 
+A:  * The init process in Linux is the first process started by the kernel once it finishes loading during the boot process.
+    * init is the foundation of process management on a Linux system, setting the stage for all other operations. 
+    * It's the system's way of organizing and starting services during boot and ensuring everything runs as expected.
+    * It has the process ID (PID) of 1, and it is the parent of all other processes on the system.
+    * Key Functions of init:
+        System Initialization:
+            Sets up the system environment.
+            Mounts filesystems.
+            Starts essential services (e.g., network, logging).
 
-19. What is RAID?
+    * Starting Other Processes:
+            Spawns other daemons and services based on its configuration.
+            Reads its configuration file to determine what to launch at various runlevels or targets.
+
+    * Managing Runlevels (SysV) or Targets (systemd):
+            Decides which set of services/processes to run based on the system's runlevel or target.
+            Reaping Zombie Processes:
+            As PID 1, init is responsible for adopting and cleaning up orphaned processes.
+
+
+
+
+
 
 20. What is systemd?
+Ams: systemd is a modern system and service manager for Linux operating systems.
+    * It is designed to initialize the system, manage system services, and handle system states once the Linux kernel finishes booting.
+    * It has replaced older init systems like SysVinit in most modern Linux distributions.
+    systemd is the default init system in most modern Linux distros (like Ubuntu, Fedora, Debian, CentOS).
+    It's powerful, efficient, and offers advanced features for managing services and the overall system state.
+
+Common systemd Commands:
+systemctl status nginx
+systemctl start sshd	
+systemctl enable apache2	
+
+
+
+
+
+
+
 
 21. How do you find files in Linuyx?
 
-22. Whas is the difference between softlink and hardlink?
+Ans: In Linux, you can use find and locate to search for files—but they work very differently.
+    * 🔍 Using find — Like Walking Through Every Shelf
+          You go to the library and look at every book on every shelf until you find the one you want.
 
-23. How do you change file permission?
+          Takes longer, but it's always up to date.
+
+            🖥️ On your computer:
+                find / -name "file.txt"
+
+
+
+
+
+    * 📚 Using locate — Like Searching a Catalog
+            You use a catalog or database that lists all books as of last night.
+            Very fast, but it might not show new books added today.
+
+            🖥️ On your computer:
+
+                   # locate file.txt
+
+                This uses a pre-built list of files. It’s fast, but not always up to date.
+When Should You Use Each?
+* Use find if:
+    You just created a file
+    You want exact, up-to-date results
+    You want to search by size, date, type, etc.
+* Use locate if:
+    You need a fast search
+    You don’t care if it’s slightly outdated
+    You know the file name and just want to find its location quickly
+
+
+
 
 24. How do you combine two commands, and what is the use of a pipe (|) in linux?
 
