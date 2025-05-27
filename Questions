@@ -126,3 +126,32 @@ nice: Set priority at start (nice -n 10 script.sh)
 renice: Change priority of running process
 Priority range: -20 (highest) to 19 (lowest)
 
+
+16. What is shell?
+A: Basically a CMD inteface that lets you interact with OS os called shell. It like a bridge between kernel and me. 
+
+
+
+17. What are the basic components of a linux OS?
+    * Kernel
+    * System Library
+    * System Utility
+    * Boot loader
+    * Applicatiom software
+
+18. What is the init process in linux?
+A: 
+
+19. What is RAID?
+
+20. What is systemd?
+
+21. How do you find files in Linuyx?
+
+22. Whas is the difference between softlink and hardlink?
+
+23. How do you change file permission?
+
+24. How do you combine two commands, and what is the use of a pipe (|) in linux?
+
+25. 
