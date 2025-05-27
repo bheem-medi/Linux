@@ -139,6 +139,14 @@ A: Basically a CMD inteface that lets you interact with OS os called shell. It l
     * Boot loader
     * Applicatiom software
 
+
+
+
+
+
+
+
+
 18. What is the init process in linux?
 A: 
 
@@ -154,4 +162,86 @@ A:
 
 24. How do you combine two commands, and what is the use of a pipe (|) in linux?
 
-25. 
+################################################################################################################################
+
+
+25. Difference between Bash and DOS 
+Ans:  Bash (Bourne-Again SHell) is a command-line interpreter or shell primarily used in Unix-like operating 
+systems like Linux and macOS, while DOS (Disk Operating System) was a popular operating system for 
+IBM-compatible personal computers in the past. Bash is a powerful scripting language and command
+line interface, while DOS is a command-line interface for an older operating system.
+
+
+
+
+26. Where will you check log files in linux? 
+Ans: In Linux, log files are typically found within the /var/log directory and its subdirectories. You can explore 
+this directory using commands like ls -l /var/log to see the available log files. 
+
+
+
+
+27. What is runlevel in linux ? 
+In Linux, a runlevel is a state or mode that defines what services and processes are available on the 
+system. Each runlevel represents a specific system configuration and is used to control what gets started 
+or stopped when the system boots or changes states.
+
+
+28. Traditional SysV Init Runlevels (0–6): 
+These are the standard runlevels in most traditional Linux distributions that use the SysV init system: 
+Runlevel   Description 
+0          Halt (shutdown the system) 
+1          Single-user mode (maintenance mode)
+2          Multi-user mode without networking 
+3          Multi-user mode with networking (text mode) 
+4          Undefined / user-definable
+5          Multi-user mode with GUI (graphical mode)
+6          Reboot the system
+
+
+
+
+
+29. What is the port number for maven 
+Maven itself does not use a specific port number, because it is a build automation tool that runs locally 
+(like when you run mvn clean install). It doesn’t act as a server or listen on a port. 
+However, if you're asking about Maven downloading dependencies from a repository (like Maven 
+Central), then: 
+• It uses HTTP/HTTPS, which means: 
+o Port 80 for HTTP 
+o Port 443 for HTTPS (most common for Maven Central) 
+If you're using a Maven repository manager like Nexus, Artifactory, or JFrog, then the default ports 
+might be: 
+• Nexus Repository Manager: usually runs on port 8081 
+• JFrog Artifactory: default port is often 8081 as well (but can be customized)
+
+
+
+30. What is Apache and Tomcat 
+Apache is a web server that serves static and dynamic content, while Apache Tomcat is a servlet 
+container primarily used for running Java applications. Apache is written in C and is known for its speed 
+and efficiency in serving static content like HTML, images, and CSS. Tomcat is written in Java and is 
+optimized for serving dynamic content, such as Java Servlets and JSP files.  
+
+
+
+
+31. What is Rsync in Linux 
+Rsync is a powerful Linux command-line utility used for transferring and synchronizing files between 
+local and remote computers. It's particularly efficient for backing up and restoring data, as it only 
+transfers the differences between the source and destination, making it bandwidth-efficient and fast for 
+large file transfers. 
+
+
+32. What is raid in linux 
+In Linux, RAID (Redundant Array of Independent Disks) is a technology that combines multiple physical 
+disk drives into a single logical unit to improve performance, data redundancy, or both. It essentially 
+creates a virtual storage array that appears as a single device to the operating system. 
+
+
+
+33. 
+
+ 
+ 
+
