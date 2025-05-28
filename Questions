@@ -25,10 +25,73 @@ Edit
 Answer:
 A symbolic link is a reference to another file.
 
-bash
-Copy
-Edit
 ln -s /path/to/original /path/to/link
+
+
+
+8. What is the use of cut,sed and awk commands?
+Ans:  sed(stream editor), awk(Aho Weinberger Kernighan
+                              Alfred Aho
+                              Peter Weinberger
+                              Brian Kernighan (also co-creator of Unix and C)
+
+
+
+📌 cut – The Scissors
+Real-life Analogy: You're cutting out specific columns from a table or lines from a page.
+🔧 Purpose:
+Extract specific columns or character positions from a file or input.
+
+Example File: data.txt
+
+John,Doe,28,Engineer
+Alice,Smith,34,Doctor
+Bob,Brown,22,Student
+
+cut -d',' -f1 data.txt
+
+-d',' – Use comma as the separator.
+-f1 – field number Extract first field (column).
+
+output:
+John
+Alice
+Bob
+
+
+📌 sed – The Editor
+Real-life Analogy: You're using Find and Replace in a text editor.
+🔧 Purpose:
+Stream editor – modify, delete, or replace text on the fly.
+
+eg. sed 's/Engineer/Developer/' data.txt
+
+s → substitute
+'s/old/new/' → replace first "Engineer" with "Developer" in each line
+
+🧠 Like using Ctrl+H (Find & Replace) in Word.
+You can also delete lines, insert, or transform text.
+
+
+ awk – The Analyst
+Real-life Analogy: A data analyst summarizing info from a table.
+🔧 Purpose:
+Field-based text processing & reporting tool – great for summarizing, filtering, and reformatting.
+
+e.g;  awk -F',' '{print $1 " is a " $4}' data.txt
+
+-F',' – Use comma as field separator, same as delimiter in sed 
+{print $1 " is a " $4} – Print first and fourth fields with a sentence.
+
+output: 
+John is a Engineer
+Alice is a Doctor
+Bob is a Student
+
+
+
+
+
 
 
 9. 12. How do you troubleshoot high CPU usage in Linux?
